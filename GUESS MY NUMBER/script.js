@@ -13,10 +13,10 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess, typeof guess);
 
   if (!guess) {
-    displayMessage('⛔️ No number!');
+    displayMessage('No number!');
 
   } else if (guess === secretNumber) {
-    displayMessage('🎉 Correct Number!');
+    displayMessage(' Correct Number!');
     document.querySelector('.number').textContent = secretNumber;
 
     document.querySelector('body').style.backgroundColor = '#60b347';
@@ -30,11 +30,11 @@ document.querySelector('.check').addEventListener('click', function () {
     
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
+      displayMessage(guess > secretNumber ? ' Too high!' : ' Too low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      displayMessage('💥 You lost the game!');
+      displayMessage(' You lost the game!');
       document.querySelector('.score').textContent = 0;
     }
   }
